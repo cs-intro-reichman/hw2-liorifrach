@@ -1,18 +1,22 @@
 public class TimeCalc {
     public static void main(String[] args) {
 
+        // קריאת ערכים מהקלט
         String timeInput = args[0];
-        int minutesToadd = Integer.parseInt(args[1]);
+        int minutesToAdd = Integer.parseInt(args[1]);
 
+        // חילוץ השעות והדקות מהקלט
         int hours = Integer.parseInt(timeInput.substring(0, 2));
-        int minutes = Integer.parseInt((timeInput.substring(3, 5)));
+        int minutes = Integer.parseInt(timeInput.substring(3, 5));
 
-        int totlalminutes = (hours * 60) + minutes + minutesToadd;
+        // חישוב כל הדקות הכלולות
+        int totalMinutes = (hours * 60) + minutes + minutesToAdd;
 
-        int newhours = (totlalminutes / 60) % 24; 
-        int newminuts = totlalminutes % 60;
+        // חישוב השעות החדשות והדקות החדשות
+        int newHours = (totalMinutes / 60) % 24;
+        int newMinutes = totalMinutes % 60;
 
-        System.out.printf("%02d:%02d\n", newhours, newminuts);
-
+        // הצגת התוצאה בפורמט "hh:mm"
+        System.out.printf("%02d:%02d\n", newHours, newMinutes);
     }
 }
