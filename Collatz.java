@@ -29,17 +29,17 @@ public class Collatz {
             System.out.println("Every one of the first " + seed + " hailstone sewuences reached 1." );
         }
         if (mode.equals("c")){
-            for (int i =1; i <= seed; i ++){
+            for (int i =1; i <= seed; i++){
                 int current = i;
                 while (current != 1) {
                     if (current % 2 == 0){
                         current = current / 2;
                     } else {
-                        current = current * 3 +1;
+                        current = current * 3 + 1;
                     }
                 }
             }
-            System.out.println("Everym one of the first " + seed + " hailstone sequences reached 1. ");
+            System.out.println("Every one of the first " + seed + " hailstone sequences reached 1. ");
 
         }
     }
